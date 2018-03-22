@@ -8,25 +8,100 @@ int main() {
    int numero, n1, n2, n3, n4, n5;
    int n6,n7,n8,n9,n10,n11,n12;
    cout<<"Escribe un numero de uno a diez mil (numeros): "; cin>>numero;
-
-   n6=numero/100000;
+   n9 = numero/100000000;
+   n8 = numero/10000000%10;
+   n7 = numero/1000000%10;
+   n6 = numero/100000%10;
    n1 = (numero / 10000 % 10);
    n2 = (numero / 1000) % 10;
    n3 = (numero / 100) % 10;
    n4 = (numero / 10) % 10;
    n5 = (numero % 10);
 
-
-
-   cout<<"\n"<<n6<<" -> Centenas de mil"<<endl;
+    cout<<"\n"<<n9<<" -> Centenas de millon"<<endl;
+    cout<<n8<<" -> Decenas de millon"<<endl;
+    cout<<n7<<" -> Unidades de millon"<<endl;
+   cout<<n6<<" -> Centenas de mil"<<endl;
    cout<<n1<<" -> Decenas de mil"<<endl;
    cout<<n2<<" -> Unidades de mil"<<endl;
    cout<<n3<<" -> Centenas"<<endl;
    cout<<n4<<" -> Decenas"<<endl;
    cout<<n5<<" -> Unidades \n"<<endl;
-   if(numero > 100000){
+   if(numero > 100000000){
       cout<<"El numero ingresado excede el rango de valores";
    }else{
+    //Decenas de Millones
+        if(n9 == 1){
+            cout<<"CIEN MILLONES ";
+        }
+      if(n1 == 1){
+         cout<<"DIEZ Y ";
+      }else if(n1 == 2){
+         cout<<"VEINTE Y ";
+      }else if(n1 == 3){
+         cout<<"TREINTA Y ";
+      }else if(n1 == 4){
+         cout<<"CUARENTA Y ";
+      }else if(n1 == 5){
+         cout<<"CINCUENTA Y ";
+      }else if(n1 == 6){
+        cout<<"SESENTA Y ";
+      }else if(n1 == 7){
+         cout<<"SETENTA Y ";
+      }else if(n1 == 8){
+         cout<<"OCHENTA Y ";
+      }else if(n1 == 9){
+         cout<<"NOVENTA Y "<<endl;
+      }
+
+
+    //Millones
+        if(n8 == 1){
+            cout<<"DIEZ MILLONES ";
+        }
+      if(n1 == 1){
+         cout<<"UN MILLON ";
+      }else if(n1 == 2){
+         cout<<"DOS MILLONES ";
+      }else if(n1 == 3){
+         cout<<"TRES MILLONES ";
+      }else if(n1 == 4){
+         cout<<"CUATRO MILLONES ";
+      }else if(n1 == 5){
+         cout<<"CINCO MILLONES ";
+      }else if(n1 == 6){
+        cout<<"SEIS MILLONES ";
+      }else if(n1 == 7){
+         cout<<"SIETE MILLONES ";
+      }else if(n1 == 8){
+         cout<<"OCHO MILLONES ";
+      }else if(n1 == 9){
+         cout<<"NUEVE MILLONES "<<endl;
+      }
+
+    //Centenas de miles
+        if(n7 == 1){
+            cout<<"Un Millon";
+        }
+      if(n1 == 1){
+         cout<<"CIEN ";
+      }else if(n1 == 2){
+         cout<<"DOSCIENTOS ";
+      }else if(n1 == 3){
+         cout<<"TRESCIENTOS ";
+      }else if(n1 == 4){
+         cout<<"CUATROCIENTOS ";
+      }else if(n1 == 5){
+         cout<<"QUINIENTOS ";
+      }else if(n1 == 6){
+        cout<<"SEISCIENTOS ";
+      }else if(n1 == 7){
+         cout<<"SETECIENTOS ";
+      }else if(n1 == 8){
+         cout<<"OCHOCIENTOS ";
+      }else if(n1 == 9){
+         cout<<"NOVECIENTOS "<<endl;
+      }
 
    //Decenas de miles
         if(n6 == 1){
@@ -51,10 +126,6 @@ int main() {
       }else if(n1 == 9){
          cout<<"NOVENTA Y "<<endl;
       }
-
-
-
-
 /***************************************/
       if(n1 == 1){
       cout<<"Diez mil";
